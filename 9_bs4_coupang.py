@@ -49,7 +49,6 @@ for item in items:
     
     if float(rate) >= 4.5 and int(rate_cnt) >= 100:
         print(name, price, rate, rate_cnt)
-        
     #-----------------------------------------------------------------------------
 
     
