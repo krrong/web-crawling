@@ -52,7 +52,7 @@ images = soup.find_all("img", attrs={"width":180})          # 전체 상품 이�
 for idx, image in enumerate(images):
     image_url = image["src"]
     
-    with open("cu_11_url", "a") as f:
+    with open("cu_11_url.txt", "a") as f:
         f.write(image_url + "\n")
         
 print("경로 저장 완료")
@@ -63,11 +63,11 @@ for idx, good in enumerate(goods):
     print(good.get_text() + " : " + prices[idx].get_text())
     
     # 상품 이름 저장
-    with open('cu_11_name','a') as f1:
+    with open('cu_11_name.txt','a') as f1:
         f1.write(good.get_text() + '\n')
     
     # 상품 가격 저장
-    with open('cu_11_price','a') as f2:
+    with open('cu_11_price.txt','a') as f2:
         f2.write(prices[idx].get_text() + '\n')
         
 
