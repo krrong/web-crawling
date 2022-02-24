@@ -7,14 +7,11 @@ res.raise_for_status()
 soup = BeautifulSoup(res.text, "lxml")
 
 newses = soup.find_all("div", attrs={"class":"cjs_t"})
-links = soup.find_all("a", attrs={"class":"cjs_news_a"})
+links = soup.find_all("a", attrs={"class":"cjs_news_a _cds_link"})
 
-for link in links:
-    print(link["href"])
+# for link in links:
+#     print(link["href"])
 
 for idx, news in enumerate(newses):
     print(news.get_text())
     print(" ▶ 링크 주소 : " + links[idx]["href"])
-    
-
-    

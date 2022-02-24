@@ -37,7 +37,6 @@ while True:
     
 print("스크롤 완료")
 
-import requests
 from bs4 import BeautifulSoup
 
 soup = BeautifulSoup(browser.page_source, "lxml")

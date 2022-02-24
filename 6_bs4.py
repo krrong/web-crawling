@@ -15,11 +15,12 @@ soup = BeautifulSoup(res.text, "lxml")
 # print(soup.a.attrs) # a element의 속성 정보 출력
 # print(soup.a['href']) # a element의 href 속성 값 정보 출력
 
-# class":"Nbtn_upload 인 a element를 찾아줘
+# # class":"Nbtn_upload 인 a element를 찾아줘
 # print(soup.find("a", attrs={"class":"Nbtn_upload"}))
 
 # print(soup.find("li", attrs={"class":"rank01"}))
 # rank1 = soup.find("li", attrs={"class":"rank01"})
+# print(rank1.a)
 # print(rank1.a.get_text())
 # print(rank1.nextSibling.nextSibling.a.get_text())
 # rank2 = rank1.next_sibling.next_sibling

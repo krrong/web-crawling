@@ -1,7 +1,10 @@
+
+
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://comic.naver.com/webtoon/list?titleId=675554"
+# 신의 탑 url
+url = "https://comic.naver.com/webtoon/list?titleId=183559&weekday=mon"
 res = requests.get(url)
 res.raise_for_status() # 문제가 생기면 바로 종료
 

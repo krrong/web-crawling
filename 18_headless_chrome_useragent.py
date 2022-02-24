@@ -4,7 +4,7 @@ from selenium import webdriver
 options = webdriver.ChromeOptions()
 options.headless = True
 options.add_argument("window-size=1920x1080")
-options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36")
+options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36")
 
 browser = webdriver.Chrome("./webscraping_basic/chromedriver.exe", options=options)
 browser.maximize_window()

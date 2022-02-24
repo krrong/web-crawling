@@ -16,7 +16,7 @@ browser.maximize_window()   # 페이지 크기 최대화
 url = "https://www.7-eleven.co.kr/product/presentList.asp"
 browser.get(url)
 
-# "+"버튼 찾아서 클릭 이때의 xpath는 아래와 같음
+# "+"버튼 찾아서 클릭(이때의 xpath는 아래와 같음)
 time.sleep(interval)
 elem = browser.find_element_by_xpath("//*[@id='listUl']/li[15]/a")
 elem.click()
