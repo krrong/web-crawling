@@ -49,28 +49,26 @@ from selenium.webdriver.support import expected_conditions as EC
 # #         break
 
 # # 각 행사 상품 이미지 경로 저장
-# for idx, image in enumerate(images):
-#     image_url = image["src"]
-    
-#     with open("cu_11_link.txt", "w", encoding='utf-8') as f:
+# with open("cu_11_link.txt", "w", encoding='utf-8') as f:
+
+#     for idx, image in enumerate(images):
+#         image_url = image["src"]
 #         f.write(image_url + "\n")
         
 # print("경로 저장 완료")
 
-
-# for idx, good in enumerate(goods):
-#     # 상품 이름 : 가격 출력
-#     print(good.get_text() + " : " + prices[idx].get_text())
-    
-#     # 상품 이름 저장
-#     with open('cu_11_name.txt','w', encoding='utf-8') as f1:
-#         f1.write(good.get_text() + '\n')
-    
-#     # 상품 가격 저장
+# with open('cu_11_name.txt','w', encoding='utf-8') as f1:
 #     with open('cu_11_price.txt','w', encoding='utf-8') as f2:
-#         f2.write(prices[idx].get_text() + '\n')
-        
 
+#         for idx, good in enumerate(goods):
+#             # 상품 이름 : 가격 출력
+#             print(good.get_text() + " : " + prices[idx].get_text())
+            
+#             # 상품 이름 저장
+#             f1.write(good.get_text() + '\n')
+            
+#             # 상품 가격 저장
+#             f2.write(prices[idx].get_text() + '\n')
 # print("저장 완료")
 
 # # ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -105,26 +103,25 @@ goods = soup.find_all("p", attrs={"class":"prodName"})    # 상품
 prices = soup.find_all("p", attrs={"class":"prodPrice"})  # 가격
 images = soup.find_all("img", attrs={"width":180})          # 이미지
 
+
 # 각 행사 상품 이미지 경로 저장
-for idx, image in enumerate(images):
-    image_url = image["src"]
-    
-    with open("cu_21_link.txt", "w", encoding='utf-8') as f:
+with open("cu_21_link.txt", "w", encoding='utf-8') as f:
+    for idx, image in enumerate(images):
+        image_url = image["src"]
         f.write(image_url + "\n")
         
 print("경로 저장 완료")
 
-
-for idx, good in enumerate(goods):
-    # 상품 이름 : 가격 출력
-    print(good.get_text() + " : " + prices[idx].get_text())
-    
-    # 상품 이름 저장
-    with open('cu_21_name.txt','w', encoding='utf-8') as f1:
-        f1.write(good.get_text() + '\n')
-    
-    # 상품 가격 저장
+with open('cu_21_name.txt','w', encoding='utf-8') as f1:
     with open('cu_21_price.txt','w', encoding='utf-8') as f2:
-        f2.write(prices[idx].get_text() + '\n')
+        for idx, good in enumerate(goods):
+            # 상품 이름 : 가격 출력
+            print(good.get_text() + " : " + prices[idx].get_text())
+            
+            # 상품 이름 저장
+            f1.write(good.get_text() + '\n')
+            
+            # 상품 가격 저장
+            f2.write(prices[idx].get_text() + '\n')
 
 print("저장 완료")
